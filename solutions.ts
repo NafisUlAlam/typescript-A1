@@ -21,7 +21,7 @@ const formatCoordinate = ([latitude, longitude, locationName]: readonly [
   number,
   string,
 ]): string => {
-  return `"Location: ${locationName} (${latitude}, ${longitude})"`;
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
 
 const concatenateArrays = <T>(...args: T[][]): T[] => {
@@ -64,7 +64,7 @@ class Employee {
   ) {}
 
   getDetails() {
-    return `"Employee: ${this.name}, Base Salary: ${this.baseSalary}"`;
+    return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
   }
 }
 
@@ -78,7 +78,7 @@ class Manager extends Employee {
   }
 
   getRoleInfo() {
-    return `"Manager of ${this.department}: ${this.name}"`;
+    return `Manager of ${this.department}: ${this.name}`;
   }
 }
 
@@ -86,10 +86,10 @@ const validateAgeAsync = async (age: number): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (age >= 18) {
       setTimeout(() => {
-        resolve('"Access Granted"');
+        resolve("Access Granted");
       }, 1000);
     } else {
-      reject(new Error('"Access Denied: Must be 18 or older"'));
+      reject(new Error("Access Denied: Must be 18 or older"));
     }
   });
 };
